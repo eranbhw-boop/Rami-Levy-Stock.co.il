@@ -3,140 +3,175 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>רמי לוי סטוק — רשת הסטוק הזולה במדינה</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <meta name="description" content="רמי לוי סטוק — רשת הסטוק הזולה במדינה. האתר יעלה בקרוב.">
+
   <style>
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: 100%;
+    }
 
     body {
       min-height: 100vh;
-      background: #ffffff;
-      font-family: 'Montserrat', Arial, sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
+      background: #f9e3f1;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #222;
+      line-height: 1.5;
     }
 
-    body::before {
-      content: '';
+    .top-bar,
+    .bottom-bar {
       position: fixed;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: radial-gradient(ellipse at center, #fdf0f7 0%, #f7d6ec 60%, #f0bde0 100%);
-      z-index: 0;
-    }
-
-    .page-wrapper {
-      position: relative;
-      z-index: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
+      left: 0;
       width: 100%;
-      padding: 40px 20px;
+      height: 6px;
+      background: #E91E8C;
+      z-index: 10;
     }
 
     .top-bar {
-      position: fixed;
       top: 0;
-      left: 0;
-      width: 100%;
-      height: 6px;
-      background: #E91E8C;
-      z-index: 10;
     }
 
     .bottom-bar {
-      position: fixed;
       bottom: 0;
-      left: 0;
+    }
+
+    .page-wrapper {
+      min-height: 100vh;
       width: 100%;
-      height: 6px;
-      background: #E91E8C;
-      z-index: 10;
+      padding: 48px 20px 56px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: radial-gradient(ellipse at center, #fdf0f7 0%, #f7d6ec 60%, #f0bde0 100%);
     }
 
     .card {
       background: #ffffff;
       border-radius: 16px;
-      box-shadow:
-        0 2px 8px rgba(233,30,140,0.08),
-        0 20px 60px rgba(233,30,140,0.15);
-      padding: 60px 80px 50px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      box-shadow: 0 20px 60px rgba(120, 20, 80, 0.18);
+      padding: 56px 72px 46px;
       max-width: 580px;
       width: 100%;
       border-top: 5px solid #E91E8C;
     }
 
-    .logo-wrapper {
+    .logo {
       width: 100%;
       max-width: 380px;
-      margin-bottom: 40px;
-    }
-
-    .logo-wrapper img {
-      width: 100%;
       height: auto;
       display: block;
+      margin: 0 auto 36px;
       border-radius: 10px;
     }
 
     .divider {
-      width: 60px;
-      height: 3px;
+      width: 64px;
+      height: 4px;
       background: #E91E8C;
-      margin-bottom: 28px;
+      margin: 0 auto 24px;
+    }
+
+    h1 {
+      font-size: 1.25rem;
+      margin-bottom: 10px;
+      color: #222;
     }
 
     .tagline {
-      font-size: 13px;
-      font-weight: 400;
-      letter-spacing: 4px;
-      color: #b06090;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      color: #7a2b58;
       text-transform: uppercase;
-      text-align: center;
     }
 
-    .footer-note {
-      margin-top: 50px;
-      font-size: 11px;
-      color: #c090b0;
-      letter-spacing: 1px;
+    .footer {
+      margin-top: 32px;
+      font-size: 0.875rem;
+      color: #5f3150;
+    }
+
+    .footer-links {
+      margin-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px 12px;
+    }
+
+    a {
+      color: #6b1648;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    a:focus-visible {
+      outline: 3px solid #222;
+      outline-offset: 4px;
+      border-radius: 4px;
     }
 
     @media (max-width: 520px) {
       .card {
-        padding: 40px 28px 36px;
-        border-radius: 10px;
+        padding: 36px 24px 32px;
+        border-radius: 12px;
       }
-      .logo-wrapper {
+
+      .logo {
         max-width: 280px;
+      }
+
+      h1 {
+        font-size: 1.1rem;
+      }
+
+      .tagline {
+        font-size: 0.95rem;
+        letter-spacing: 0.12em;
       }
     }
   </style>
 </head>
-<body>
-  <div class="top-bar"></div>
-  <div class="bottom-bar"></div>
 
-  <div class="page-wrapper">
-    <div class="card">
-      <div class="logo-wrapper">
-        <img src="logo.png" alt="רמי לוי סטוק — רשת הסטוק הזולה במדינה">
-      </div>
-      <div class="divider"></div>
+<body>
+  <div class="top-bar" aria-hidden="true"></div>
+  <div class="bottom-bar" aria-hidden="true"></div>
+
+  <main class="page-wrapper">
+    <section class="card" aria-labelledby="main-title">
+      <img
+        class="logo"
+        src="logo.png"
+        alt="רמי לוי סטוק — רשת הסטוק הזולה במדינה"
+      >
+
+      <div class="divider" aria-hidden="true"></div>
+
+      <h1 id="main-title">רמי לוי סטוק</h1>
       <p class="tagline">Coming Soon</p>
-    </div>
-    <p class="footer-note">כל הזכויות שמורות .רמי לוי סטוק 2026 ©</p>
-  </div>
+    </section>
+
+<footer class="footer">
+    <p>© 2026 רמי לוי סטוק. כל הזכויות שמורות.</p>
+
+    <nav class="footer-links" aria-label="קישורים משפטיים">
+        <a href="privacy.html">מדיניות פרטיות</a>
+        <span aria-hidden="true">|</span>
+        <a href="accessibility.html">הצהרת נגישות</a>
+    </nav>
+</footer>
+    
+  </main>
 </body>
 </html>
