@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>רמי לוי סטוק — רשת הסטוק הזולה במדינה</title>
-  <meta name="description" content="רמי לוי סטוק — רשת הסטוק הזולה במדינה. האתר יעלה בקרוב.">
+  <title>רמי לוי סטוק - רשת הסטוק הזולה במדינה</title>
+  <meta name="description" content="רמי לוי סטוק - רשת הסטוק הזולה במדינה. האתר יעלה בקרוב.">
   <link rel="icon" href="/favicon.png" type="image/png">
   <link rel="shortcut icon" href="/favicon.png" type="image/png">
   <link rel="apple-touch-icon" href="/favicon.png">
@@ -20,7 +20,10 @@
       background: radial-gradient(ellipse at center, #fdf0f7 0%, #f7d6ec 60%, #f0bde0 100%);
       line-height: 1.5;
     }
-
+    .copyright {
+        direction: rtl;
+        unicode-bidi: plaintext;
+    }
     .top-bar, .bottom-bar {
       position: fixed;
       left: 0;
@@ -236,7 +239,10 @@
     </section>
 
     <footer class="footer">
-      <p>© 2026 רמי לוי סטוק. כל הזכויות שמורות.</p>
+      <p class="copyright">
+          <span dir="ltr">© 2026</span>
+          רמי לוי סטוק. כל הזכויות שמורות.
+      </p>
       <nav class="footer-links" aria-label="קישורים משפטיים">
         <button class="link-button" type="button" data-modal="privacy">מדיניות פרטיות</button>
         <span aria-hidden="true">|</span>
